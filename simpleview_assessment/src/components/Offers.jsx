@@ -17,13 +17,14 @@ class Offers extends Component {
   }
 
   render() {
-    const loading_text = 'The "listings" api is loading';
+    const loading_text = 'The "offers" api is loading';
 
-    // to achieve the pattern I need to set every 5th article's lg col grid to 6
     const offers = this.state.offers.map(offer => {
       let indexValue = this.state.offers.indexOf(offer);
-      let offer_class_name = "col col-xs-12 col-sm-12 col-md-4 col-lg-";
-      offer_class_name += indexValue === 0 || indexValue % 5 === 0 ? "6" : "3";
+      let offer_class_name = "data-components-container ";
+
+      offer_class_name +=
+        indexValue === 0 || indexValue % 5 === 0 ? "double" : "single";
 
       return (
         <div key={indexValue} className={offer_class_name}>

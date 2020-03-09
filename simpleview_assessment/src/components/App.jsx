@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "./Header";
 
 // route components
-import MainComponent from "./MainComponent";
 import Listings from "./Listings";
 import Offers from "./Offers";
 import Events from "./Events";
@@ -16,7 +15,7 @@ class App extends Component {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/" component={MainComponent} />
+          <Route exact path="/" component={Listings} />
           <Route exact path="/listings" component={Listings} />
           <Route exact path="/offers" component={Offers} />
           <Route exact path="/events" component={Events} />

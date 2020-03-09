@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ArticleComponent from "./ArticleComponent";
+import ListingComponent from "./ListingComponent";
 
 class Listings extends Component {
   state = {
@@ -22,13 +22,14 @@ class Listings extends Component {
     // to achieve the pattern I need to set every 5th article's lg col grid to 6
     const listings = this.state.listings.map(listing => {
       let indexValue = this.state.listings.indexOf(listing);
-      let listing_class_name = "col col-xs-12 col-sm-12 col-md-4 col-lg-";
+      let listing_class_name = "data-components-container ";
+
       listing_class_name +=
-        indexValue === 0 || indexValue % 5 === 0 ? "6" : "3";
+        indexValue === 0 || indexValue % 5 === 0 ? "double" : "single";
 
       return (
         <div key={indexValue} className={listing_class_name}>
-          <ArticleComponent article={listing} />
+          <ListingComponent article={listing} />
         </div>
       );
     });

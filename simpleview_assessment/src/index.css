@@ -3,6 +3,44 @@
   font-weight: 400;
 }
 
+/* screen breakpoints */
+div.row {
+  max-width: 1200px;
+}
+
+div.data-components-container {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 0px) {
+  div.data-components-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  div.data-components-container {
+    width: 33%;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  div.data-components-container {
+    padding: 15px;
+  }
+
+  div.data-components-container.single {
+    width: 25%;
+  }
+
+  div.data-components-container.double {
+    width: 50%;
+  }
+}
+
+/* nav styles */
+
 ul.nav > li {
   position: relative;
   display: inline-block;

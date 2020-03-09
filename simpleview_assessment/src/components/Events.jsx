@@ -19,11 +19,12 @@ class Events extends Component {
   render() {
     const loading_text = 'The "events" api is loading';
 
-    // to achieve the pattern I need to set every 5th article's lg col grid to 6
     const events = this.state.events.map(event => {
       let indexValue = this.state.events.indexOf(event);
-      let event_class_name = "col col-xs-12 col-sm-12 col-md-4 col-lg-";
-      event_class_name += indexValue === 0 || indexValue % 5 === 0 ? "6" : "3";
+      let event_class_name = "data-components-container ";
+
+      event_class_name +=
+        indexValue === 0 || indexValue % 5 === 0 ? "double" : "single";
 
       return (
         <div key={indexValue} className={event_class_name}>
