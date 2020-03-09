@@ -1,0 +1,18 @@
+ul.nav > li {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  list-style: none;
+}
+
+ul.nav > li > a {
+  background-color: #bbb;
+  color: #000;
+  border: 0;
+}
+
+ul.nav > li > a:hover {
+  background-color: #73267e;
+  border-image-outset: 5px;
+  border: 3px solid #73267e;
+}

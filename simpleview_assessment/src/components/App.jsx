@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
+
+// route components
 import MainComponent from "./MainComponent";
 import Listings from "./Listings";
 import Offers from "./Offers";
@@ -13,12 +15,12 @@ class App extends Component {
     return (
       <Router>
         <Header />
-        <switch>
+        <Switch>
           <Route exact path="/" component={MainComponent} />
           <Route exact path="/listings" component={Listings} />
           <Route exact path="/offers" component={Offers} />
           <Route exact path="/events" component={Events} />
-        </switch>
+        </Switch>
       </Router>
     );
   }

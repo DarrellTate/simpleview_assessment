@@ -17,17 +17,18 @@ class Header extends Component {
         <li key={button.id}>
           <Link
             to={"/" + button.value.toLowerCase()}
-            className="btn btn-primary btn-sm"
+            className="btn btn-sm nav-link"
           >
             {button.value}
           </Link>
         </li>
       );
     });
+
     return (
       <header>
-        <nav>
-          <ul>{button_list_items}</ul>
+        <nav className="navbar">
+          <ul className="nav">{button_list_items}</ul>
         </nav>
       </header>
     );
