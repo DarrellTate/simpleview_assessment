@@ -16,7 +16,9 @@ class Header extends Component {
       return (
         <li key={button.id}>
           <Link
-            to={"/" + button.value.toLowerCase()}
+            to={
+              "/" + (button.value === "All" ? "" : button.value.toLowerCase())
+            }
             className="btn btn-sm nav-link"
           >
             {button.value}
