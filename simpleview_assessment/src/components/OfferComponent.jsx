@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import fallback_image from "./../images/fallback.jpg";
 
-class ArticleComponent extends Component {
+class OfferComponent extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -12,48 +12,24 @@ class ArticleComponent extends Component {
       title:
         props.article && props.article.title
           ? props.article.title
-          : "Title Unavailable",
-      zip:
-        props.article && props.article.zip
-          ? props.article.zip
-          : "Zip Unavailable",
-      address1:
-        props.article && props.article.address1
-          ? props.article.address
-          : "Address Unavailable",
-      region:
-        props.article && props.article.region
-          ? props.article.region
-          : "Region Unavailable",
+          : "Title unavailable",
       description:
         props.article && props.article.description
           ? props.article.description
-          : "Description Unavailable",
-      city:
-        props.article && props.article.city
-          ? props.article.city
-          : "City Unavailable",
-      state:
-        props.article && props.article.state
-          ? props.article.state
-          : "State Unavailable",
-      recid: props.article && props.article.recid ? props.article.recid : -1,
-      weburl:
-        props.article && props.article.weburl
-          ? props.article.weburl
-          : "WebUrl Unavailable",
-      phone:
-        props.article && props.article.phone
-          ? props.article.phone
-          : "Phone Unavailable",
-      qualityScore:
-        props.article && props.article.qualityScore
-          ? props.article.qualityScore
-          : "City Unavailable"
+          : "Description unavailable",
+      recid:
+        props.article && props.article.recid
+          ? props.article.recid
+          : "Description unavailable",
+      redeemStart:
+        props.article && props.article.redeemstart
+          ? props.article.redeemstart
+          : "Description unavailable"
     };
   }
 
   render() {
+    const eventDate = new Date(this.state.startDate);
     return (
       <article>
         {/*
@@ -85,4 +61,4 @@ class ArticleComponent extends Component {
   }
 }
 
-export default ArticleComponent;
+export default OfferComponent;
